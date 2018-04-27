@@ -18,6 +18,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'dotenv-rails'
 gem 'omniauth'
 gem 'omniauth-github'
+gem 'slim-rails'
+gem 'html2slim'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

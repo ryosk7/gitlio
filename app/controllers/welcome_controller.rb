@@ -8,6 +8,9 @@ class WelcomeController < ApplicationController
     # end
     # client = Octokit::Client.new(:oauth_token => current_user.oauth_token)
     # @repos = client.refs[:repos].get.data
+
+    # @client = Octokit::Client.new(:access_token => current_user.oauth_token)
+
     @users.each do |user_info|
       @client = Octokit::Client.new(:access_token => user_info.oauth_token)
     end

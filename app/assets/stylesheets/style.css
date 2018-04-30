@@ -1,0 +1,80 @@
+/* ------- */
+/* --PC用--*/
+/* ------- */
+body {
+  background-color: #ffffcf;
+}
+
+h3 {
+  color: red;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1200px) {
+  /* -------- */
+  /* -スマホ用- */
+  /* -------- */
+  .profile-card {
+    width: 100%;
+    margin: 10px 5px;
+  }
+  .profile-card .card {
+    margin: 100px 96px;
+    padding: 0;
+    box-shadow: 30px 37px #c7b5b5;
+  }
+
+  .profile-card .card .card-header {
+    text-align: center;
+    padding: 70px 10px 30px 10px;
+    background: #eae9e9;
+  }
+
+  .profile-card .card .card-header img {
+    width: 36%;
+    border-radius: 50%;
+  }
+
+  .profile-card .card .card-header h1{
+    font-size: 75px;
+    color: #fe7d5a;
+  }
+
+  .profile-card .card .card-header h2 {
+    font-size: 35px;
+    color: #696767;
+  }
+
+  .profile-card .card .card-contents {
+    text-align: center;
+    padding: 30px 10px;
+    background: #F7F6F5;
+  }
+
+  .profile-card .card .card-contents h3 {
+    font-size: 30px;
+  }
+
+  .profile-card .card .card-contents h3 .content-title{
+    margin: 0 0 3px 0;
+  }
+
+  .profile-card .card .card-contents h3 .repos{
+    color: #3ad62b;
+    font-size: 30px;
+  }
+
+  .profile-card .card .card-contents h3 .langs{
+    color: #d6752b;
+    font-size: 30px;
+  }
+
+  .profile-card .card .card-contents p {
+    text-align: center;
+    margin: 0 58px;
+    color: #192cc7;
+  }
+}

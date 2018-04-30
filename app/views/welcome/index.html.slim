@@ -1,11 +1,38 @@
-- @users.each do |user|
-  h3
-    = user.name
-  - client = Octokit::Client.new(:access_token => user.oauth_token)
-  - client.repos.each do |repo|
-    hr
-    = link_to(repo.html_url)
-      = repo.name
-      br
-      = repo.language
-    br
+.profile-card
+  - @users.each do |user|
+    = link_to welcome_path(user)
+      .card
+        .card-header
+          = image_tag(user.avatar_image)
+          h1
+            = user.name
+          - client = Octokit::Client.new(:access_token => user.oauth_token)
+          h2
+            = client.user.name
+        .card-contents
+          h3
+            .repos
+              .content-title
+                | repository
+              br
+              = client.user.public_repos
+          h3
+            .langs
+              .content-title
+                | language
+              br
+              - lang_ary = []
+              - langs = []
+              - client.repos.each do |repo|
+                - lang_ary << repo.language
+                - langs << lang_ary
+                - langs.flatten!
+                - langs.uniq!
+              - langs.compact!.each do |lang|
+                = "#{lang} "
+          p
+            = client.user.bio
+          / = link_to(repo.html_url)
+            / = repo.name
+            / br
+            / = repo.language

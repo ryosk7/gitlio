@@ -1,0 +1,8 @@
+- @users.each do |user|
+  = user.name
+  / = image_tag(user.avatar_image)
+  - user.repos_info do |repo|
+    = repo.name
+- @repos.each do |repo|
+  = repo.name
+  = repo.language

@@ -8,7 +8,8 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
     - if logged_in?
-      = link_to 'Sign out', '/signout'
+      = link_to 'Sign out', logout_path
     - else
       = link_to 'Githubアカウントでログイン', '/auth/github'
+    br
     = yield

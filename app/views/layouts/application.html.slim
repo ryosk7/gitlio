@@ -7,9 +7,17 @@ html
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
-    - if logged_in?
-      = link_to 'Sign out', logout_path
-    - else
-      = link_to 'Githubアカウントでログイン', '/auth/github'
+    = link_to welcome_index_path
+      .nav_logo
+        .logo
+          p Gitlio
+    .nav_list
+      .list
+        - if logged_in?
+          = link_to 'Sign out', logout_path
+        - else
+          = link_to 'Sign in', '/auth/github'
+    br
+    br
     br
     = yield

@@ -1,16 +1,93 @@
 /* ------- */
 /* --PC用--*/
 /* ------- */
+html {
+  font-size: 100%;
+}
+
 body {
   background-color: #ffffcf;
+  font-size: 100%;
+  margin: 0;
+}
+
+h1 {
+  font-size: 5.7em;
+}
+
+h2 {
+  font-size: 3.5em
 }
 
 h3 {
   color: red;
+  font-size: 2.5em;
+}
+
+h4 {
+  font-size: 4em;
+}
+
+p {
+  font-size: 2.5em;
 }
 
 a {
   text-decoration: none;
+}
+
+.nav_logo {
+  width: 19%;
+  height: 9%;
+  background-color: #81C14B;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 1px 0 0 10px;
+  box-shadow: 155px 19px #74D3AE;
+}
+
+.nav_logo .logo {
+  width: 20px;
+  float: left;
+}
+
+.nav_logo .logo p {
+  font-size: 7em;
+  color: #F2F3AE;
+  margin: 26px;
+  text-shadow: 7px -1px 1px #465837, 1px 1px #e5f3d9;
+  font-weight: bold;
+}
+
+.nav_list {
+  width: 24%;
+  height: 6%;
+  background-color: #FE938C;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  padding: 1px 0 0 10px;
+}
+
+.nav_list .list {
+  float: right;
+  padding: 20px 0 0 0;
+  text-align: right;
+}
+
+.nav_list .list p {
+  font-size: 1em;
+}
+
+.nav_list .list a {
+  text-align: right;
+  font-size: 3em;
+  color: #F2F3AE;
+  padding: 0 27px 0 0;
+  text-shadow: -1px -1px 1px #5a3f3d, 1px 1px #eae9e9;
 }
 
 @media screen and (max-width: 1200px) {
@@ -39,23 +116,20 @@ a {
   }
 
   .profile-card .card .card-header h1{
-    font-size: 75px;
     color: #fe7d5a;
   }
 
   .profile-card .card .card-header h2 {
-    font-size: 35px;
     color: #696767;
   }
 
   .profile-card .card .card-contents {
     text-align: center;
-    padding: 30px 10px;
+    padding: 70px 10px;
     background: #F7F6F5;
   }
 
   .profile-card .card .card-contents h3 {
-    font-size: 30px;
   }
 
   .profile-card .card .card-contents h3 .content-title{
@@ -64,12 +138,10 @@ a {
 
   .profile-card .card .card-contents h3 .repos{
     color: #3ad62b;
-    font-size: 30px;
   }
 
   .profile-card .card .card-contents h3 .langs{
     color: #d6752b;
-    font-size: 30px;
   }
 
   .profile-card .card .card-contents p {
@@ -77,4 +149,58 @@ a {
     margin: 0 58px;
     color: #192cc7;
   }
+
+  .github-infos{
+
+  }
+
+  .github-infos .languages{
+    margin: 40px 0 0 0;
+    padding: 1px;
+    background-color: #d6752b;
+  }
+
+  .github-infos .languages .title{
+    text-align: center;
+  }
+
+  .github-infos .languages .title h4 {
+    margin: 25px 0;
+    color: #F7F6F5;
+    text-shadow: -1px -1px 1px #000000, 1px 1px #ffffff;
+  }
+
+  .github-infos .languages .contents{
+    padding: 10px 10px 50px 93px;
+  }
+
+  .github-infos .languages .contents h3{
+    color: #F7F6F5;
+    margin: 35px 0;
+  }
+
+  .github-infos .collections{
+    background: #F7F6F5;
+    padding: 1px;
+  }
+
+  .github-infos .collections .title{
+    text-align: center;
+  }
+
+  .github-infos .collections .title h4 {
+    margin: 25px 0;
+    color: #d6752b;
+    text-shadow: -1px -1px 1px #ffffff, 1px 1px #000000;
+  }
+
+  .github-infos .collections .contents{
+    padding: 10px 10px 50px 93px;
+  }
+
+  .github-infos .collections .contents h3{
+    color: #d6752b;
+    margin: 35px 0;
+  }
+
 }

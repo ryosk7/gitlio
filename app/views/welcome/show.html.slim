@@ -4,20 +4,17 @@
       = image_tag(@user.avatar_image)
       h1
         = @user.name
-      - client = Octokit::Client.new(:access_token => @user.oauth_token)
-      - all_repos_data = Faraday.get("https://api.github.com/users/#{@user.name}/repos?per_page=100&type=owner")
-      - repos_data = JSON.parse(all_repos_data.body, symbolize_names: true)
       h2
-        = @client.user.name
+        = @user.full_name
     .card-contents
       h3
         .repos
           .content-title
             | repository
           br
-          = @client.user.public_repos
+          = @user.repositories.size
       p
-        = @client.user.bio
+        = @user.bio
       br
 
 .github-infos
@@ -27,24 +24,21 @@
         | languages
       br
     .contents
-      - lang_ary = []
-      - langs = []
-      - @client.repos.each do |repo|
-        - lang_ary << repo.language
-        - langs << lang_ary
-        - langs.flatten!
-        - langs.uniq!
-      - langs.compact!.each do |lang|
         h3
-          = "- #{lang} "
+          - langs = @user.repositories.map { |repo| repo.language.name }.uniq.compact
+          - langs.each do |lang|
+            = "- #{lang}"
+            br
   .collections
     .title
       h4
         | collections
       br
     .contents
-      - stared_repos = []
-      - repos_data.each do |repo|
-        - if repo[:stargazers_count] > 0
-          h3
-            = "- #{repo[:name]}"
+      h3
+        - @user.repositories.each do |repo|
+          - if repo.star > 0
+            = "- #{repo.name}"
+            br
+          end
+        end

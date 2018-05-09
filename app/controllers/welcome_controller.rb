@@ -3,13 +3,13 @@ class WelcomeController < ApplicationController
   end
   def index
     @users = User.all
-    @users.each do |user_info|
-      @client = Octokit::Client.new(:access_token => user_info.oauth_token)
-    end
+    # @users.each do |user_info|
+    #   @client = Octokit::Client.new(:access_token => user_info.oauth_token)
+    # end
   end
   def show
     @user = User.find(params[:id])
-    @client = Octokit::Client.new(:access_token => @user.oauth_token)
+    # @client = Octokit::Client.new(:access_token => @user.oauth_token)
   end
 
   private

@@ -9,6 +9,7 @@ body {
   background-color: #ffffcf;
   font-size: 100%;
   margin: 0;
+  height: 300px;
 }
 
 h1 {
@@ -94,12 +95,36 @@ a {
   /* -------- */
   /* -スマホ用- */
   /* -------- */
+
+  .top {
+    position: relative;
+    width: 100%;
+    margin: 180px 5px 0 5px;
+    height: 100%;
+  }
+
+  .top .top-greeting {
+    /* position: absolute;
+    left: 0;
+    top: 40; */
+    float: left;
+    -webkit-writing-mode: vertical-rl;
+     -ms-writing-mode: tb-rl;
+         writing-mode: vertical-rl;
+  }
+
+  .top .top-greeting h1 {
+    margin: 0;
+    font-size: 14.7em;
+    color: #F4D77F;
+  }
+
   .profile-card {
     width: 100%;
     margin: 10px 5px;
   }
   .profile-card .card {
-    margin: 100px 96px;
+    margin: 185px 96px 100px 96px;
     padding: 0;
     box-shadow: 30px 37px #c7b5b5;
   }
@@ -134,6 +159,7 @@ a {
 
   .profile-card .card .card-contents h3 .content-title{
     margin: 0 0 3px 0;
+    font-size: 1.5em;
   }
 
   .profile-card .card .card-contents h3 .repos{
@@ -142,6 +168,7 @@ a {
 
   .profile-card .card .card-contents h3 .langs{
     color: #d6752b;
+    font-size: 1.5em;
   }
 
   .profile-card .card .card-contents p {

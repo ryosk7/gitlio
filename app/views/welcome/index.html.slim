@@ -1,17 +1,15 @@
-- @users.each do |user|
-  = user.name
-  / = image_tag(user.avatar_image)
-  - user.repos_info do |repo|
-    = repo.name
-/ - @repos.each do |repo|
-/   = repo.name
-/   = repo.language
-
-= @client.repos.first.name
-- @client.repos.each do |repo|
-  = link_to(repo.html_url)
-    = repo.name
-  / = image_tag(repo.owner.avatar_url)
-  br
-  = repo.language
-  br
+.profile-card
+  - @users.each do |user|
+    = link_to welcome_path(user)
+      .card
+        .card-header
+          = image_tag(user.avatar_image)
+          h1
+            = user.name
+        .card-contents
+          h3
+            .langs
+              .content-title
+                | language
+              br
+                = user.repositories.map { |repo| repo.language.name }.uniq.join(' ')

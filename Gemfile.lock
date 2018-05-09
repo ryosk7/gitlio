@@ -217,6 +217,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   dotenv-rails
+  faraday
   html2slim
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)

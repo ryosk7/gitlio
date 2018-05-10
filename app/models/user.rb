@@ -15,15 +15,8 @@ class User < ApplicationRecord
   def save_repositories!
     client = Octokit::Client.new access_token: oauth_token
     repos = client.repositories(name, per_page: 100)
-    if Repository.exists?
-      Repository.delete_all
-      repos.each do |repo|
-        Repository.create(user: self, name: repo.name, star: repo.stargazers_count, language: Language.find_or_create_by(name: repo.language))
-      end
-    else
-      repos.each do |repo|
-        Repository.create(user: self, name: repo.name, star: repo.stargazers_count, language: Language.find_or_create_by(name: repo.language))
-      end
+    repos.each do |repo|
+      Repository.create(user: self, name: repo.name, star: repo.stargazers_count, language: Language.find_or_create_by(name: repo.language))
     end
   end
 end

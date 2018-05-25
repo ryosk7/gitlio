@@ -21,16 +21,16 @@ body {
 }
 
 h1 {
-  font-size: 5.7em;
+  font-size: 5em;
 }
 
 h2 {
-  font-size: 3.5em
+  font-size: 3em
 }
 
 h3 {
   color: red;
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
 h4 {
@@ -38,7 +38,7 @@ h4 {
 }
 
 p {
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
 a {
@@ -47,32 +47,31 @@ a {
 
 .nav_logo {
   width: 18%;
-  height: 12%;
-  background-color: #81C14B;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  padding: 1px 0 0 10px;
-  box-shadow: 155px 19px #74D3AE;
+  height: 23%;
+  /* position: fixed; */
+  /* top: 0; */
+  /* left: 0; */
+  /* z-index: 1; */
+  /* padding: 1px 0 0 10px; */
+  /* box-shadow: 155px 19px #74D3AE; */
 }
 
 .nav_logo .logo {
-  width: 20px;
+  width: 16em;
   float: left;
 }
 
-.nav_logo .logo p {
+/* .nav_logo .logo p {
   font-size: 7em;
   color: #F2F3AE;
   margin: 26px;
   text-shadow: 7px -1px 1px #465837, 1px 1px #e5f3d9;
   font-weight: bold;
-}
+} */
 
 .nav_list {
-  width: 24%;
-  height: 6%;
+  width: 10%;
+  height: 7%;
   background-color: #FE938C;
   position: fixed;
   top: 0;
@@ -83,7 +82,7 @@ a {
 
 .nav_list .list {
   float: right;
-  padding: 20px 0 0 0;
+  padding: 5px 11px 11px 11px;
   text-align: right;
 }
 
@@ -93,16 +92,184 @@ a {
 
 .nav_list .list a {
   text-align: right;
-  font-size: 3em;
+  font-size: 2em;
   color: #F2F3AE;
-  padding: 0 27px 0 0;
+  padding: 0 38px 0 0;
   text-shadow: -1px -1px 1px #5a3f3d, 1px 1px #eae9e9;
+}
+
+.profile-card {
+  width: 100%;
+  margin: 10px 5px;
+}
+.profile-card .card {
+  margin: 88px 96px 100px 96px;
+  padding: 0;
+  box-shadow: 11px 10px #c7b5b5;
+  width: 386px;
+}
+
+.profile-card .card .card-header {
+  text-align: center;
+  padding: 70px 10px 30px 10px;
+  background: #eae9e9;
+}
+
+.profile-card .card .card-header img {
+  width: 33%;
+  border-radius: 50%;
+}
+
+.profile-card .card .card-header h1{
+  color: #fe7d5a;
+  font-size: 2em;
+}
+
+.profile-card .card .card-header h2 {
+  color: #696767;
+}
+
+.profile-card .card .card-contents {
+  text-align: center;
+  padding: 4px 10px;
+  background: #F7F6F5;
+}
+
+.profile-card .card .card-contents h3 {
+}
+
+.profile-card .card .card-contents h3 .content-title{
+  margin: 0 0 3px 0;
+  font-size: 1em;
+}
+
+.profile-card .card .card-contents h3 .repos{
+  color: #3ad62b;
+}
+
+.profile-card .card .card-contents h3 .langs{
+  color: #d6752b;
+  font-size: 1em;
+}
+
+.profile-card .card .card-contents p {
+  text-align: center;
+  margin: 0 58px;
+  color: #192cc7;
+}
+
+.pc .card-contents {
+  float: right;
+}
+
+.pc .card-contents {
+  text-align: center;
+  padding: 70px 10px;
+  background: #F7F6F5;
+}
+
+.pc .card-contents h3 .content-title{
+  margin: 0 0 3px 0;
+  font-size: 1em;
+}
+
+.pc .card-contents h3 .repos{
+  color: #3ad62b;
+}
+
+.pc .card-contents h3 .langs{
+  color: #d6752b;
+  font-size: 1em;
+}
+
+.pc .card-contents p {
+  text-align: center;
+  margin: 0 58px;
+  color: #192cc7;
+}
+
+.sp {
+  display: none;
+}
+
+.pc .github-infos .languages{
+  margin: 40px 0 0 0;
+  padding: 1px;
+  background-color: #d6752b;
+}
+
+.pc .github-infos .languages .title{
+  text-align: center;
+}
+
+.pc .github-infos .languages .title h4 {
+  margin: 25px 0;
+  color: #F7F6F5;
+  text-shadow: -1px -1px 1px #000000, 1px 1px #ffffff;
+}
+
+.pc .github-infos .languages .contents{
+  padding: 10px 10px 50px 93px;
+}
+
+.pc .github-infos .languages .contents h3{
+  color: #F7F6F5;
+  margin: 35px 0;
+}
+
+.pc .github-infos .collections{
+  background: #F7F6F5;
+  padding: 1px;
+}
+
+.pc .github-infos .collections .title{
+  text-align: center;
+}
+
+.pc .github-infos .collections .title h4 {
+  margin: 25px 0;
+  color: #d6752b;
+  text-shadow: -1px -1px 1px #ffffff, 1px 1px #000000;
+}
+
+.pc .github-infos .collections .contents{
+  padding: 10px 10px 50px 93px;
+}
+
+.pc .github-infos .collections .contents h3{
+  color: #d6752b;
+  margin: 35px 0;
 }
 
 @media screen and (max-width: 1200px) {
   /* -------- */
   /* -スマホ用- */
   /* -------- */
+
+  .nav_list {
+    width: 27%;
+    height: 6%;
+    background-color: #FE938C;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    padding: 1px 0 0 10px;
+  }
+
+  .nav_list .list {
+    float: right;
+    padding: 9px 11px 11px 11px;
+    text-align: right;
+  }
+
+  .nav_list .list a {
+    text-align: right;
+    font-size: 3em;
+    color: #F2F3AE;
+    padding: 0 38px 0 0;
+    text-shadow: -1px -1px 1px #5a3f3d, 1px 1px #eae9e9;
+  }
 
   .top {
     position: relative;
@@ -134,7 +301,8 @@ a {
   .profile-card .card {
     margin: 185px 96px 100px 96px;
     padding: 0;
-    box-shadow: 30px 37px #c7b5b5;
+    box-shadow: 17px 18px #c7b5b5;
+    width: 79%;
   }
 
   .profile-card .card .card-header {
@@ -144,12 +312,13 @@ a {
   }
 
   .profile-card .card .card-header img {
-    width: 36%;
+    width: 38%;
     border-radius: 50%;
   }
 
   .profile-card .card .card-header h1{
     color: #fe7d5a;
+    font-size: 5em;
   }
 
   .profile-card .card .card-header h2 {
@@ -185,55 +354,52 @@ a {
     color: #192cc7;
   }
 
-  .github-infos{
 
-  }
-
-  .github-infos .languages{
+  .sp .github-infos .languages{
     margin: 40px 0 0 0;
     padding: 1px;
     background-color: #d6752b;
   }
 
-  .github-infos .languages .title{
+  .sp .github-infos .languages .title{
     text-align: center;
   }
 
-  .github-infos .languages .title h4 {
+  .sp .github-infos .languages .title h4 {
     margin: 25px 0;
     color: #F7F6F5;
     text-shadow: -1px -1px 1px #000000, 1px 1px #ffffff;
   }
 
-  .github-infos .languages .contents{
+  .sp .github-infos .languages .contents{
     padding: 10px 10px 50px 93px;
   }
 
-  .github-infos .languages .contents h3{
+  .sp .github-infos .languages .contents h3{
     color: #F7F6F5;
     margin: 35px 0;
   }
 
-  .github-infos .collections{
+  .sp .github-infos .collections{
     background: #F7F6F5;
     padding: 1px;
   }
 
-  .github-infos .collections .title{
+  .sp .github-infos .collections .title{
     text-align: center;
   }
 
-  .github-infos .collections .title h4 {
+  .sp .github-infos .collections .title h4 {
     margin: 25px 0;
     color: #d6752b;
     text-shadow: -1px -1px 1px #ffffff, 1px 1px #000000;
   }
 
-  .github-infos .collections .contents{
+  .sp .github-infos .collections .contents{
     padding: 10px 10px 50px 93px;
   }
 
-  .github-infos .collections .contents h3{
+  .sp .github-infos .collections .contents h3{
     color: #d6752b;
     margin: 35px 0;
   }

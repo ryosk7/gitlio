@@ -1,11 +1,13 @@
-.profile-card
-  .card
-    .card-header
-      = image_tag(@user.avatar_image)
-      h1
-        = @user.name
-      h2
-        = @user.full_name
+.pc
+  .profile-card
+    .card
+      .card-header
+        = image_tag(@user.avatar_image)
+        h1
+          = @user.name
+        h2
+          = @user.full_name
+
     .card-contents
       h3
         .repos
@@ -17,28 +19,83 @@
         = @user.bio
       br
 
-.github-infos
-  .languages
-    .title
-      h4
-        | languages
-      br
-    .contents
+/ ----------- /
+/ --   pc  -- /
+/ ----------- /
+
+.pc
+  .github-infos
+    .languages
+      .title
+        h4
+          | languages
+        br
+      .contents
+          h3
+            - langs = @user.repositories.map { |repo| repo.language.name }.uniq.compact
+            - langs.each do |lang|
+              = "- #{lang}"
+              br
+    .collections
+      .title
+        h4
+          | collections
+        br
+      .contents
         h3
-          - langs = @user.repositories.map { |repo| repo.language.name }.uniq.compact
-          - langs.each do |lang|
-            = "- #{lang}"
-            br
-  .collections
-    .title
-      h4
-        | collections
-      br
-    .contents
-      h3
-        - @user.repositories.each do |repo|
-          - if repo.star > 0
-            = "- #{repo.name}"
-            br
+          - @user.repositories.each do |repo|
+            - if repo.star > 0
+              = "- #{repo.name}"
+              br
+            end
           end
-        end
+
+  / ----------- /
+  / --   sp  -- /
+  / ----------- /
+  .sp
+    .profile-card
+      .card
+        .card-header
+          = image_tag(@user.avatar_image)
+          h1
+            = @user.name
+          h2
+            = @user.full_name
+        .card-contents
+          h3
+            .repos
+              .content-title
+                | repository
+              br
+              = @user.repositories.size
+          p
+            = @user.bio
+          br
+
+  .sp
+    .github-infos
+      .languages
+        .title
+          h4
+            | languages
+          br
+        .contents
+            h3
+              - langs = @user.repositories.map { |repo| repo.language.name }.uniq.compact
+              - langs.each do |lang|
+                = "- #{lang}"
+                br
+      .collections
+        .title
+          h4
+            | collections
+          br
+        .contents
+          h3
+            - @user.repositories.each do |repo|
+              - if repo.star > 0
+                = "- #{repo.name}"
+                br
+              end
+            end

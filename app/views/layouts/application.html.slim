@@ -9,8 +9,7 @@ html
   body
     = link_to welcome_index_path
       .nav_logo
-        .logo
-          p Gitlio
+        = image_tag('Gitlio_logo.png', alt: 'Gitlio logo', class: 'logo')
     .nav_list
       .list
         - if logged_in?

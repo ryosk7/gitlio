@@ -98,61 +98,139 @@ a {
   text-shadow: -1px -1px 1px #5a3f3d, 1px 1px #eae9e9;
 }
 
-.profile-card {
+.sp {
+  display: none;
+}
+
+.pc .profile-card {
   width: 100%;
   margin: 10px 5px;
 }
-.profile-card .card {
+.pc .profile-card .card {
   margin: 88px 96px 100px 96px;
   padding: 0;
   box-shadow: 11px 10px #c7b5b5;
   width: 386px;
 }
 
-.profile-card .card .card-header {
+.pc .profile-card .card .card-header {
   text-align: center;
   padding: 70px 10px 30px 10px;
   background: #eae9e9;
 }
 
-.profile-card .card .card-header img {
+.pc .profile-card .card .card-header img {
   width: 33%;
   border-radius: 50%;
 }
 
-.profile-card .card .card-header h1{
+.pc .profile-card .card .card-header h1{
   color: #fe7d5a;
   font-size: 2em;
 }
 
-.profile-card .card .card-header h2 {
+.pc .profile-card .card .card-header h2 {
   color: #696767;
 }
 
-.profile-card .card .card-contents {
+.pc .user-profile {
+  padding: 0 400px;
+}
+
+.pc .user-profile table .user-name-td {
+  padding: 68px 0 0 0;
+}
+
+.pc .user-profile table .user-name {
+  font-size: 83px;
+  padding: 20px;
+  text-align: center;
+  background-color: #7DCFB6;
+  color: #AAFCB8;
+  margin: 0 0 30px 0;
+}
+
+.pc .user-profile table .user-langs {
+  padding: 40px 80px;
+  margin: 0 0 30px 30px;
+  font-size: 31px;
+  background-color: #FC9F5B;
+  color: #ffffcf;
+}
+
+.pc .user-profile table .user-langs h3 {
+  font-size: 58px;
+  color: #D1603D;
+  margin: 0;
+}
+
+.pc .user-profile .repos-td {
+  width: 100%;
+}
+
+.pc .user-profile table .user-repos {
+  font-size: 29px;
+  padding: 40px 52px;
+  margin: 0 30px 0 0;
+  background-color: #33CA7F;
+  color: #ffffcf;
+}
+
+.pc .user-profile table .user-repos h3 {
+  font-size: 58px;
+  color: #499F68;
+  margin: 0;
+}
+
+.pc .user-profile table .user-bio {
+  font-size: 33px;
+  padding: 20px;
+  margin: 23px 0 0 0;
+  background-color: #B1CC74;
+  color: #358600;
+}
+
+.pc .user-profile table .user-bio h3 {
+  font-size: 58px;
+  color: #358600;
+  margin: 0;
+}
+
+.pc .user-profile table .user-avatar {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.pc .user-profile table .user-avatar img {
+  width: 212px;
+  border-radius: 50%;
+}
+
+
+.pc .profile-card .card .card-contents {
   text-align: center;
   padding: 4px 10px;
   background: #F7F6F5;
 }
 
-.profile-card .card .card-contents h3 {
+.pc .profile-card .card .card-contents h3 {
 }
 
-.profile-card .card .card-contents h3 .content-title{
+.pc .profile-card .card .card-contents h3 .content-title{
   margin: 0 0 3px 0;
   font-size: 1em;
 }
 
-.profile-card .card .card-contents h3 .repos{
+.pc .profile-card .card .card-contents h3 .repos{
   color: #3ad62b;
 }
 
-.profile-card .card .card-contents h3 .langs{
+.pc .profile-card .card .card-contents h3 .langs{
   color: #d6752b;
   font-size: 1em;
 }
 
-.profile-card .card .card-contents p {
+.pc .profile-card .card .card-contents p {
   text-align: center;
   margin: 0 58px;
   color: #192cc7;
@@ -186,10 +264,6 @@ a {
   text-align: center;
   margin: 0 58px;
   color: #192cc7;
-}
-
-.sp {
-  display: none;
 }
 
 .pc .github-infos .languages{
@@ -294,66 +368,65 @@ a {
     color: #F4D77F;
   }
 
-  .profile-card {
+  .sp .profile-card {
     width: 100%;
     margin: 10px 5px;
   }
-  .profile-card .card {
+  .sp .profile-card .card {
     margin: 185px 96px 100px 96px;
     padding: 0;
     box-shadow: 17px 18px #c7b5b5;
     width: 79%;
   }
 
-  .profile-card .card .card-header {
+  .sp .profile-card .card .card-header {
     text-align: center;
     padding: 70px 10px 30px 10px;
     background: #eae9e9;
   }
 
-  .profile-card .card .card-header img {
+  .sp .profile-card .card .card-header img {
     width: 38%;
     border-radius: 50%;
   }
 
-  .profile-card .card .card-header h1{
+  .sp .profile-card .card .card-header h1{
     color: #fe7d5a;
     font-size: 5em;
   }
 
-  .profile-card .card .card-header h2 {
+  .sp .profile-card .card .card-header h2 {
     color: #696767;
   }
 
-  .profile-card .card .card-contents {
+  .sp .profile-card .card .card-contents {
     text-align: center;
     padding: 70px 10px;
     background: #F7F6F5;
   }
 
-  .profile-card .card .card-contents h3 {
+  .sp .profile-card .card .card-contents h3 {
   }
 
-  .profile-card .card .card-contents h3 .content-title{
+  .sp .profile-card .card .card-contents h3 .content-title{
     margin: 0 0 3px 0;
     font-size: 1.5em;
   }
 
-  .profile-card .card .card-contents h3 .repos{
+  .sp .profile-card .card .card-contents h3 .repos{
     color: #3ad62b;
   }
 
-  .profile-card .card .card-contents h3 .langs{
+  .sp .profile-card .card .card-contents h3 .langs{
     color: #d6752b;
     font-size: 1.5em;
   }
 
-  .profile-card .card .card-contents p {
+  .sp .profile-card .card .card-contents p {
     text-align: center;
     margin: 0 58px;
     color: #192cc7;
   }
-
 
   .sp .github-infos .languages{
     margin: 40px 0 0 0;

@@ -4,19 +4,28 @@ html
     title
       | Gitlio
     = csrf_meta_tags
+    meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
     = link_to welcome_index_path
-      .nav_logo
-        = image_tag('Gitlio_logo.png', alt: 'Gitlio logo', class: 'logo')
-    .nav_list
-      .list
-        - if logged_in?
-          = link_to 'Sign out', logout_path
-        - else
-          = link_to 'Sign in', '/auth/github'
-    br
-    br
-    br
+      .sp
+        .nav_logo
+          = image_tag('Gitlio_logo.png', alt: 'Gitlio logo', class: 'logo')
+        .nav_list
+          .list
+            - if logged_in?
+              = link_to 'Sign out', logout_path
+            - else
+              = link_to 'Sign in', '/auth/github'
+      .pc
+        .nav_logo
+          = image_tag('Gitlio_logo.png', alt: 'Gitlio logo', class: 'logo')
+        .nav_list
+          .list
+            - if logged_in?
+              = link_to 'Sign out', logout_path
+            - else
+              = link_to 'Sign in', '/auth/github'
+
     = yield

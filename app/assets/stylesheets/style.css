@@ -15,6 +15,7 @@ body {
   font-size: 100%;
   margin: 0;
   height: 300px;
+  display: grid;
 }
 
 h1 {
@@ -44,7 +45,7 @@ a {
 
 
 
-@media only screen and (max-width: 749px) {
+@media (max-width: 749px) {
   /* -------- */
   /* -スマホ用- */
   /* -------- */
@@ -110,27 +111,6 @@ a {
     color: #F2F3AE;
   }
 
-  .sp .top {
-    position: relative;
-    width: 100%;
-    margin: 180px 5px 0 5px;
-    height: 100%;
-  }
-
-  .sp .top .top-greeting {
-    /* position: absolute;
-    left: 0;
-    top: 40; */
-    float: left;
-    -webkit-writing-mode: vertical-rl;
-     -ms-writing-mode: tb-rl;
-         writing-mode: vertical-rl;
-  }
-
-  .sp .top .top-greeting h1 {
-    margin: 0;
-    color: #F4D77F;
-  }
 
   .sp .profile-card {
     margin: 127px 23px 10px;
@@ -242,7 +222,7 @@ a {
 /* --PC用--*/
 /* ------- */
 
-@media only screen and (min-width: 750px) {
+@media (min-width: 750px) {
 
   /*600px以上で適用する内容*/
 

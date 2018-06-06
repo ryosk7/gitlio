@@ -1,44 +1,93 @@
-.profile-card
-  .card
-    .card-header
-      = image_tag(@user.avatar_image)
-      h1
-        = @user.name
-      h2
-        = @user.full_name
-    .card-contents
-      h3
-        .repos
-          .content-title
-            | repository
-          br
-          = @user.repositories.size
-      p
-        = @user.bio
-      br
-
-.github-infos
-  .languages
-    .title
-      h4
-        | languages
-      br
-    .contents
+/ ----------- /
+/ --   sp  -- /
+/ ----------- /
+.sp
+  .profile-card
+    .card
+      .card-header
+        = image_tag(@user.avatar_image)
+        h1
+          = @user.name
+        h2
+          = @user.full_name
+      .card-contents
         h3
-          - langs = @user.repositories.map { |repo| repo.language.name }.uniq.compact
-          - langs.each do |lang|
-            = "- #{lang}"
+          .repos
+            .content-title
+              | repository
             br
-  .collections
-    .title
-      h4
-        | collections
-      br
-    .contents
-      h3
-        - @user.repositories.each do |repo|
-          - if repo.star > 0
-            = "- #{repo.name}"
-            br
+            = @user.repositories.size
+        p
+          = @user.bio
+        br
+
+  .github-infos
+    .languages
+      .title
+        h4
+          | languages
+        br
+      .contents
+          h3
+            - langs = @user.repositories.map { |repo| repo.language.name }.uniq.compact
+            - langs.each do |lang|
+              = "- #{lang}"
+              br
+    .collections
+      .title
+        h4
+          | collections
+        br
+      .contents
+        h3
+          - @user.repositories.each do |repo|
+            - if repo.star > 0
+              = "- #{repo.name}"
+              br
+            end
           end
-        end
+
+
+/ ----------- /
+/ --   pc  -- /
+/ ----------- /
+
+
+.pc
+  .user-profile
+    table align="center"
+      tr
+        td.user-name-td colspan="2"
+           / name
+           .user-name
+             = @user.full_name
+        td rowspan="2"
+           / langs
+           .user-langs
+             h3
+              | languages
+             - langs = @user.repositories.map { |repo| repo.language.name }.uniq.compact
+             - langs.each do |lang|
+               = "- #{lang}"
+               br
+      tr
+        td.repos-td rowspan="2"
+           / repos
+           .user-repos
+             h3
+              | collections
+             - @user.repositories.each do |repo|
+               - if repo.star > 0
+                 = "- #{repo.name}"
+                 br
+        td
+           / photo
+           .user-avatar
+             = image_tag(@user.avatar_image)
+      tr
+        td colspan="2"
+           / bio
+           .user-bio
+             h3
+              | Bio
+             = @user.bio

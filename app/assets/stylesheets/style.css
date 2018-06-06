@@ -1,6 +1,3 @@
-/* ------- */
-/* --PC用--*/
-/* ------- */
 
 /* ----Google fonts---- */
 
@@ -18,19 +15,20 @@ body {
   font-size: 100%;
   margin: 0;
   height: 300px;
+  display: grid;
 }
 
 h1 {
-  font-size: 5.7em;
+  font-size: 5em;
 }
 
 h2 {
-  font-size: 3.5em
+  font-size: 3em
 }
 
 h3 {
   color: red;
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
 h4 {
@@ -38,204 +36,468 @@ h4 {
 }
 
 p {
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
 a {
   text-decoration: none;
 }
 
-.nav_logo {
-  width: 18%;
-  height: 12%;
-  background-color: #81C14B;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  padding: 1px 0 0 10px;
-  box-shadow: 155px 19px #74D3AE;
-}
 
-.nav_logo .logo {
-  width: 20px;
-  float: left;
-}
 
-.nav_logo .logo p {
-  font-size: 7em;
-  color: #F2F3AE;
-  margin: 26px;
-  text-shadow: 7px -1px 1px #465837, 1px 1px #e5f3d9;
-  font-weight: bold;
-}
-
-.nav_list {
-  width: 24%;
-  height: 6%;
-  background-color: #FE938C;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  padding: 1px 0 0 10px;
-}
-
-.nav_list .list {
-  float: right;
-  padding: 20px 0 0 0;
-  text-align: right;
-}
-
-.nav_list .list p {
-  font-size: 1em;
-}
-
-.nav_list .list a {
-  text-align: right;
-  font-size: 3em;
-  color: #F2F3AE;
-  padding: 0 27px 0 0;
-  text-shadow: -1px -1px 1px #5a3f3d, 1px 1px #eae9e9;
-}
-
-@media screen and (max-width: 1200px) {
+@media (max-width: 749px) {
   /* -------- */
   /* -スマホ用- */
   /* -------- */
 
-  .top {
-    position: relative;
-    width: 100%;
-    margin: 180px 5px 0 5px;
-    height: 100%;
+  .pc {
+    display: none;
   }
 
-  .top .top-greeting {
-    /* position: absolute;
-    left: 0;
-    top: 40; */
+  .sp {
+    display: block;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  h4 {
+    font-size: 36px;
+  }
+
+  p {
+    font-size: 22px;
+  }
+
+  .sp .nav_logo {
+    width: 9%;
+    height: 23%;
+  }
+
+  .sp .nav_logo .logo {
+    width: 9em;
     float: left;
-    -webkit-writing-mode: vertical-rl;
-     -ms-writing-mode: tb-rl;
-         writing-mode: vertical-rl;
   }
 
-  .top .top-greeting h1 {
-    margin: 0;
-    font-size: 14.7em;
-    color: #F4D77F;
+  .sp .nav_list {
+    width: 23%;
+    height: 6%;
+    background-color: #FE938C;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    padding: 1px 0 0 10px;
   }
 
-  .profile-card {
-    width: 100%;
-    margin: 10px 5px;
+  .sp .nav_list .list {
+    float: right;
+    padding: 9px 15px 11px;
+    text-align: right;
   }
-  .profile-card .card {
-    margin: 185px 96px 100px 96px;
+
+  .sp .nav_list .list a {
+    text-align: right;
+    font-size: 1em;
+    color: #F2F3AE;
+  }
+
+
+  .sp .profile-card {
+    margin: 127px 23px 10px;
+  }
+  .sp .profile-card .card {
     padding: 0;
-    box-shadow: 30px 37px #c7b5b5;
   }
 
-  .profile-card .card .card-header {
+  .sp .profile-card .card .card-header {
     text-align: center;
     padding: 70px 10px 30px 10px;
     background: #eae9e9;
+    border-radius: 10px 10px 0 0;
   }
 
-  .profile-card .card .card-header img {
-    width: 36%;
+  .sp .profile-card .card .card-header img {
+    width: 38%;
     border-radius: 50%;
   }
 
-  .profile-card .card .card-header h1{
+  .sp .profile-card .card .card-header h1{
     color: #fe7d5a;
   }
 
-  .profile-card .card .card-header h2 {
+  .sp .profile-card .card .card-header h2 {
     color: #696767;
   }
 
-  .profile-card .card .card-contents {
+  .sp .profile-card .card .card-contents {
     text-align: center;
     padding: 70px 10px;
     background: #F7F6F5;
+    border-radius: 0 0 10px 10px;
   }
 
-  .profile-card .card .card-contents h3 {
+  .sp .profile-card .card .card-contents h3 {
   }
 
-  .profile-card .card .card-contents h3 .content-title{
+  .sp .profile-card .card .card-contents h3 .content-title{
     margin: 0 0 3px 0;
     font-size: 1.5em;
   }
 
-  .profile-card .card .card-contents h3 .repos{
+  .sp .profile-card .card .card-contents h3 .repos{
     color: #3ad62b;
   }
 
-  .profile-card .card .card-contents h3 .langs{
+  .sp .profile-card .card .card-contents h3 .langs{
     color: #d6752b;
     font-size: 1.5em;
   }
 
-  .profile-card .card .card-contents p {
+  .sp .profile-card .card .card-contents p {
     text-align: center;
     margin: 0 58px;
     color: #192cc7;
   }
 
-  .github-infos{
-
-  }
-
-  .github-infos .languages{
+  .sp .github-infos .languages{
     margin: 40px 0 0 0;
     padding: 1px;
     background-color: #d6752b;
   }
 
-  .github-infos .languages .title{
+  .sp .github-infos .languages .title{
+    text-align: center;
+    height: 40px;
+  }
+
+  .sp .github-infos .languages .title h4 {
+    margin: 10px 0 0;
+    color: #F7F6F5;
+  }
+
+  .sp .github-infos .languages .contents{
+    padding: 10px 66px 0px;
+  }
+
+  .sp .github-infos .languages .contents h3{
+    color: #F7F6F5;
+    margin: 35px 0;
+  }
+
+  .sp .github-infos .collections{
+    background: #F7F6F5;
+    padding: 1px;
+  }
+
+  .sp .github-infos .collections .title{
+    text-align: center;
+    height: 40px;
+  }
+
+  .sp .github-infos .collections .title h4 {
+    color: #d6752b;
+  }
+
+  .sp .github-infos .collections .contents{
+    padding: 10px 66px 0px;
+  }
+
+  .sp .github-infos .collections .contents h3{
+    color: #d6752b;
+  }
+
+}
+
+/* ------- */
+/* --PC用--*/
+/* ------- */
+
+@media (min-width: 750px) {
+
+  /*600px以上で適用する内容*/
+
+  .pc {
+    display: block;
+  }
+
+  .sp {
+    display: none;
+  }
+
+  .pc .nav_logo {
+    width: 10%;
+    height: 23%;
+    /* position: fixed; */
+    /* top: 0; */
+    /* left: 0; */
+    /* z-index: 1; */
+    /* padding: 1px 0 0 10px; */
+    /* box-shadow: 155px 19px #74D3AE; */
+  }
+
+  .pc .nav_logo .logo {
+    width: 10em;
+    float: left;
+  }
+
+  /* .nav_logo .logo p {
+    font-size: 7em;
+    color: #F2F3AE;
+    margin: 26px;
+    text-shadow: 7px -1px 1px #465837, 1px 1px #e5f3d9;
+    font-weight: bold;
+  } */
+
+  .pc .nav_list {
+    width: 10%;
+    height: 7%;
+    background-color: #FE938C;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    padding: 1px 0 0 10px;
+  }
+
+  .pc .nav_list .list {
+    float: right;
+    padding: 5px 11px 11px 11px;
+    text-align: right;
+  }
+
+  .pc .nav_list .list p {
+    font-size: 1em;
+  }
+
+  .pc .nav_list .list a {
+    text-align: right;
+    font-size: 2em;
+    color: #F2F3AE;
+    padding: 0 38px 0 0;
+    text-shadow: -1px -1px 1px #5a3f3d, 1px 1px #eae9e9;
+  }
+
+
+
+  .pc .profile-card {
+    width: 100%;
+    margin: 10px 5px;
+  }
+  .pc .profile-card .card {
+    margin: 88px 96px 100px 96px;
+    padding: 0;
+    width: 386px;
+  }
+
+  .pc .profile-card .card .card-header {
+    text-align: center;
+    padding: 70px 10px 30px 10px;
+    background: #eae9e9;
+  }
+
+  .pc .profile-card .card .card-header img {
+    width: 33%;
+    border-radius: 50%;
+  }
+
+  .pc .profile-card .card .card-header h1{
+    color: #fe7d5a;
+    font-size: 2em;
+  }
+
+  .pc .profile-card .card .card-header h2 {
+    color: #696767;
+  }
+
+  .pc .user-profile {
+    padding: 0 400px;
+  }
+
+  .pc .user-profile table .user-name-td {
+    padding: 68px 0 0 0;
+  }
+
+  .pc .user-profile table .user-name {
+    font-size: 83px;
+    padding: 20px;
+    text-align: center;
+    background-color: #7DCFB6;
+    color: #AAFCB8;
+    margin: 0 0 30px 0;
+  }
+
+  .pc .user-profile table .user-langs {
+    padding: 40px 80px;
+    margin: 0 0 30px 30px;
+    font-size: 31px;
+    background-color: #FC9F5B;
+    color: #ffffcf;
+  }
+
+  .pc .user-profile table .user-langs h3 {
+    font-size: 58px;
+    color: #D1603D;
+    margin: 0;
+  }
+
+  .pc .user-profile .repos-td {
+    width: 100%;
+  }
+
+  .pc .user-profile table .user-repos {
+    font-size: 29px;
+    padding: 40px 52px;
+    margin: 0 30px 0 0;
+    background-color: #33CA7F;
+    color: #ffffcf;
+  }
+
+  .pc .user-profile table .user-repos h3 {
+    font-size: 58px;
+    color: #499F68;
+    margin: 0;
+  }
+
+  .pc .user-profile table .user-bio {
+    font-size: 33px;
+    padding: 20px;
+    margin: 23px 0 0 0;
+    background-color: #B1CC74;
+    color: #358600;
+  }
+
+  .pc .user-profile table .user-bio h3 {
+    font-size: 58px;
+    color: #358600;
+    margin: 0;
+  }
+
+  .pc .user-profile table .user-avatar {
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .pc .user-profile table .user-avatar img {
+    width: 212px;
+    border-radius: 50%;
+  }
+
+
+  .pc .profile-card .card .card-contents {
+    text-align: center;
+    padding: 4px 10px;
+    background: #F7F6F5;
+  }
+
+  .pc .profile-card .card .card-contents h3 {
+  }
+
+  .pc .profile-card .card .card-contents h3 .content-title{
+    margin: 0 0 3px 0;
+    font-size: 1em;
+  }
+
+  .pc .profile-card .card .card-contents h3 .repos{
+    color: #3ad62b;
+  }
+
+  .pc .profile-card .card .card-contents h3 .langs{
+    color: #d6752b;
+    font-size: 1em;
+  }
+
+  .pc .profile-card .card .card-contents p {
+    text-align: center;
+    margin: 0 58px;
+    color: #192cc7;
+  }
+
+  .pc .card-contents {
+    float: right;
+  }
+
+  .pc .card-contents {
+    text-align: center;
+    padding: 70px 10px;
+    background: #F7F6F5;
+  }
+
+  .pc .card-contents h3 .content-title{
+    margin: 0 0 3px 0;
+    font-size: 1em;
+  }
+
+  .pc .card-contents h3 .repos{
+    color: #3ad62b;
+  }
+
+  .pc .card-contents h3 .langs{
+    color: #d6752b;
+    font-size: 1em;
+  }
+
+  .pc .card-contents p {
+    text-align: center;
+    margin: 0 58px;
+    color: #192cc7;
+  }
+
+  .pc .github-infos .languages{
+    margin: 40px 0 0 0;
+    padding: 1px;
+    background-color: #d6752b;
+  }
+
+  .pc .github-infos .languages .title{
     text-align: center;
   }
 
-  .github-infos .languages .title h4 {
+  .pc .github-infos .languages .title h4 {
     margin: 25px 0;
     color: #F7F6F5;
     text-shadow: -1px -1px 1px #000000, 1px 1px #ffffff;
   }
 
-  .github-infos .languages .contents{
+  .pc .github-infos .languages .contents{
     padding: 10px 10px 50px 93px;
   }
 
-  .github-infos .languages .contents h3{
+  .pc .github-infos .languages .contents h3{
     color: #F7F6F5;
     margin: 35px 0;
   }
 
-  .github-infos .collections{
+  .pc .github-infos .collections{
     background: #F7F6F5;
     padding: 1px;
   }
 
-  .github-infos .collections .title{
+  .pc .github-infos .collections .title{
     text-align: center;
   }
 
-  .github-infos .collections .title h4 {
+  .pc .github-infos .collections .title h4 {
     margin: 25px 0;
     color: #d6752b;
     text-shadow: -1px -1px 1px #ffffff, 1px 1px #000000;
   }
 
-  .github-infos .collections .contents{
+  .pc .github-infos .collections .contents{
     padding: 10px 10px 50px 93px;
   }
 
-  .github-infos .collections .contents h3{
+  .pc .github-infos .collections .contents h3{
     color: #d6752b;
     margin: 35px 0;
   }
-
 }

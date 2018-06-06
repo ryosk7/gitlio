@@ -1,15 +1,33 @@
-.profile-card
-  - @users.each do |user|
-    = link_to welcome_path(user)
-      .card
-        .card-header
-          = image_tag(user.avatar_image)
-          h1
-            = user.name
-        .card-contents
-          h3
-            .langs
-              .content-title
-                | language
-              br
-                = user.repositories.map { |repo| repo.language.name }.uniq.join(' ')
+.pc
+  .profile-card
+    - @users.each do |user|
+      = link_to welcome_path(user)
+        .card
+          .card-header
+            = image_tag(user.avatar_image)
+            h1
+              = user.name
+          .card-contents
+            h3
+              .langs
+                .content-title
+                  | language
+                br
+                  = user.repositories.map { |repo| repo.language.name }.uniq.join(' ')
+
+.sp
+  .profile-card
+    - @users.each do |user|
+      = link_to welcome_path(user)
+        .card
+          .card-header
+            = image_tag(user.avatar_image)
+            h1
+              = user.name
+          .card-contents
+            h3
+              .langs
+                .content-title
+                  | language
+                br
+                  = user.repositories.map { |repo| repo.language.name }.uniq.join(' ')

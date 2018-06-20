@@ -22,6 +22,9 @@ gem 'slim-rails'
 gem 'html2slim'
 gem "octokit"
 gem 'faraday'
+gem 'bootstrap', '~> 4.1.1'
+gem 'jquery-rails'
+gem "chartkick"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

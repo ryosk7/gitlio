@@ -1,33 +1,42 @@
-.pc
-  .profile-card
-    - @users.each do |user|
-      = link_to welcome_path(user)
-        .card
-          .card-header
-            = image_tag(user.avatar_image)
-            h1
-              = user.name
-          .card-contents
-            h3
-              .langs
-                .content-title
-                  | language
-                br
-                  = user.repositories.map { |repo| repo.language.name }.uniq.join(' ')
+/ .profile-card
+/   - @users.each do |user|
+/     = link_to welcome_path(user)
+/       .card
+/         .card-header
+/           = image_tag(user.avatar_image)
+/           h1
+/             = user.name
+/         .card-contents
+/           h3
+/             .langs
+/               .content-title
+/                 | language
+/               br
+/                 = user.repositories.map { |repo| repo.language.name }.uniq.join(' ')
 
-.sp
-  .profile-card
+.container
+  .card-deck
     - @users.each do |user|
-      = link_to welcome_path(user)
-        .card
-          .card-header
-            = image_tag(user.avatar_image)
-            h1
-              = user.name
-          .card-contents
-            h3
-              .langs
-                .content-title
-                  | language
-                br
-                  = user.repositories.map { |repo| repo.language.name }.uniq.join(' ')
+      .card
+        .avatar
+          = image_tag(user.avatar_image, class: "avatar_img")
+        .card-body
+          h5.card-title
+            = user.name
+          p.card-text
+            = user.repositories.map { |repo| repo.language.name }.uniq.join(' ')
+  = line_chart @chart_data
+  / .card
+  /   img.card-img-top alt=("Card image cap") src=".../100px200/" /
+  /   .card-body
+  /     h5.card-title Card title
+  /     p.card-text This card has supporting text below as a natural lead-in to additional content.
+  /     p.card-text
+  /       small.text-muted Last updated 3 mins ago
+  / .card
+  /   img.card-img-top alt=("Card image cap") src=".../100px200/" /
+  /   .card-body
+  /     h5.card-title Card title
+  /     p.card-text This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+  /     p.card-text
+  /       small.text-muted Last updated 3 mins ago

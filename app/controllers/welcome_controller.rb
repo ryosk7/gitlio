@@ -6,6 +6,8 @@ class WelcomeController < ApplicationController
     # @users.each do |user_info|
     #   @client = Octokit::Client.new(:access_token => user_info.oauth_token)
     # end
+
+    @chart_data = [['2014-04-01', 60], ['2014-04-02', 65], ['2014-04-03', 64]]
   end
   def show
     @user = User.find(params[:id])

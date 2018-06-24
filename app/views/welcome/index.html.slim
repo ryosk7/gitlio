@@ -17,8 +17,8 @@
 .container
   .card-deck
     - @users.each do |user|
-      = link_to welcome_path(user)
-        .card
+      .card
+        = link_to welcome_path(user)
           .avatar
             = image_tag(user.avatar_image, class: "avatar_img")
           .card-body

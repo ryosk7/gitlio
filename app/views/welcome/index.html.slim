@@ -25,8 +25,12 @@
             h5.card-title
               = user.name
             p.card-text
-              = user.repositories.map { |repo| repo.language.name }.uniq.join(' ')
-              = pie_chart @chart_data, donut: true
+              - langs = user.repositories.map { |repo| repo.language.name }.compact.uniq
+              ul
+              - langs.each do |lang|
+                li
+                  = lang
+              / = user.repositories.map { |repo| repo.language.name }.uniq.join(' ')
 
   / .card
   /   img.card-img-top alt=("Card image cap") src=".../100px200/" /

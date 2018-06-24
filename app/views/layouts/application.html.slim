@@ -31,9 +31,36 @@ html
       /       - else
       /         = link_to 'Sign in', '/auth/github'
 
-      - if logged_in?
-        = link_to 'Sign out', logout_path
-      - else
-        = link_to 'Sign in', '/auth/github'
+      / - if logged_in?
+      /   = link_to 'Sign out', logout_path
+      / - else
+      /   = link_to 'Sign in', '/auth/github'
+      nav.navbar.navbar-light.bg-light
+        a.navbar-brand
+          = image_tag('Gitlio_logo.png', alt: 'Gitlio logo', class: 'logo')
+        / form.form-inline
+        /   #navbarText.collapse.navbar-collapse
+        /     ul.navbar-nav.mr-auto
+        /       li.nav-item
+        /         = link_to 'users', welcome_index_path
+        /       li.nav-item
+        /         - if logged_in?
+        /           button.btn.btn-outline-danger
+        /             = link_to 'Sign out', logout_path
+        /         - else
+        /           button.btn.btn-outline-success
+        /             = link_to 'Sign in', '/auth/github'
+
+        form.form-inline
+          = link_to 'users', welcome_index_path
+          - if logged_in?
+            button.btn.btn-outline-danger
+              = link_to 'Sign out', logout_path
+          - else
+            button.btn.btn-outline-success
+              = link_to 'Sign in', '/auth/github'
+        / form.form-inline
+          / input.form-control.mr-sm-2 aria-label="Search" placeholder="Search" type="search" /
+          / button.btn.btn-outline-success.my-2.my-sm-0 type="submit"  Search
 
       = yield

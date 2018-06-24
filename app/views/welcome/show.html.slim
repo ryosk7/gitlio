@@ -101,5 +101,4 @@
         h5.card-title
           = @user.name
         p.card-text
-          = @user.repositories.map { |repo| repo.language.name }.uniq.join(' ')
           = pie_chart @chart_data, donut: true

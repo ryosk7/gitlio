@@ -31,4 +31,9 @@ html
       /       - else
       /         = link_to 'Sign in', '/auth/github'
 
+      - if logged_in?
+        = link_to 'Sign out', logout_path
+      - else
+        = link_to 'Sign in', '/auth/github'
+
       = yield

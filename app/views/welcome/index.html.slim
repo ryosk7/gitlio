@@ -17,15 +17,17 @@
 .container
   .card-deck
     - @users.each do |user|
-      .card
-        .avatar
-          = image_tag(user.avatar_image, class: "avatar_img")
-        .card-body
-          h5.card-title
-            = user.name
-          p.card-text
-            = user.repositories.map { |repo| repo.language.name }.uniq.join(' ')
-  = line_chart @chart_data
+      = link_to welcome_path(user)
+        .card
+          .avatar
+            = image_tag(user.avatar_image, class: "avatar_img")
+          .card-body
+            h5.card-title
+              = user.name
+            p.card-text
+              = user.repositories.map { |repo| repo.language.name }.uniq.join(' ')
+              = pie_chart @chart_data, donut: true
+
   / .card
   /   img.card-img-top alt=("Card image cap") src=".../100px200/" /
   /   .card-body

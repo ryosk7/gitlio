@@ -9,58 +9,26 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     = javascript_include_tag "//www.google.com/jsapi", "chartkick"
   body
-      / .sp
-      /   = link_to welcome_index_path
-      /     .nav_logo
-      /       = image_tag('Gitlio_logo.png', alt: 'Gitlio logo', class: 'logo')
-      /   .nav_list
-      /     .list
-      /       - if logged_in?
-      /         = link_to 'Sign out', logout_path
-      /       - else
-      /         = link_to 'Sign in', '/auth/github'
-      /   = yield
-      / .pc
-      /   = link_to welcome_index_path
-      /     .nav_logo
-      /       = image_tag('Gitlio_logo.png', alt: 'Gitlio logo', class: 'logo')
-      /   .nav_list
-      /     .list
-      /       - if logged_in?
-      /         = link_to 'Sign out', logout_path
-      /       - else
-      /         = link_to 'Sign in', '/auth/github'
-
-      / - if logged_in?
-      /   = link_to 'Sign out', logout_path
-      / - else
-      /   = link_to 'Sign in', '/auth/github'
-      nav.navbar.navbar-light.bg-light
-        a.navbar-brand
+    nav.navbar.navbar-expand-lg.navbar-light.bg-default
+      = link_to welcome_index_path
+        .navbar-brand
           = image_tag('Gitlio_logo.png', alt: 'Gitlio logo', class: 'logo')
-        / form.form-inline
-        /   #navbarText.collapse.navbar-collapse
-        /     ul.navbar-nav.mr-auto
-        /       li.nav-item
-        /         = link_to 'users', welcome_index_path
-        /       li.nav-item
-        /         - if logged_in?
-        /           button.btn.btn-outline-danger
-        /             = link_to 'Sign out', logout_path
-        /         - else
-        /           button.btn.btn-outline-success
-        /             = link_to 'Sign in', '/auth/github'
-
-        form.form-inline
-          = link_to 'users', welcome_index_path
+      button.navbar-toggler aria-controls="navbarNavDropdown" aria-expanded="false" aria-label=("Toggle navigation") data-target="#navbarNavDropdown" data-toggle="collapse" type="button"
+        span.navbar-toggler-icon
+      #navbarNavDropdown.collapse.navbar-collapse.justify-content-end
+        ul.navbar-nav
+          li.nav-item
+            = link_to welcome_index_path, class: 'links'
+              .nav-link
+                | users
+          li.nav-item
           - if logged_in?
-            button.btn.btn-outline-danger
-              = link_to 'Sign out', logout_path
+            .nav-link
+              button.btn.btn-outline-danger
+                = link_to 'Sign out', logout_path
           - else
-            button.btn.btn-outline-success
-              = link_to 'Sign in', '/auth/github'
-        / form.form-inline
-          / input.form-control.mr-sm-2 aria-label="Search" placeholder="Search" type="search" /
-          / button.btn.btn-outline-success.my-2.my-sm-0 type="submit"  Search
+            .nav-link
+              button.btn.btn-outline-success
+                = link_to 'Sign in', '/auth/github'
 
-      = yield
+    = yield

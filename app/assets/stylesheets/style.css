@@ -5,22 +5,59 @@
 
 /* -------------------- */
 
+
+
+/* ------ */
+/* Common */
+/* ------ */
+
 html {
   font-size: 100%;
   font-family: 'Mukta Vaani', sans-serif;
+}
+
+body {
+  background-color: #f1f0b1 !important;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+ul {
+  list-style: none;
 }
 
 .logo {
   width: 130px;
 }
 
-.deconone {
-  text-decoration: none;
+.links {
+  font-size: 24px;
+}
+
+/* ---------- */
+/* index-page */
+/* --------- -*/
+
+
+/* --------- */
+/* show-page */
+/* --------- */
+
+.contents {
+  margin-top: 83px;
+}
+
+/* 次回のアップデートで修正するのでこの!importantは許してください。お願いします。。。。 */
+.col {
+  padding: 0 !important;
 }
 
 .avatar {
   text-align: center;
-  background-color: #7DCFB6;
+  background-color: #77BD55;
+  color: #C3D350;
 }
 
 .avatar_img {
@@ -29,6 +66,18 @@ html {
   border-radius: 50%;
 }
 
-.card-body {
-  color: #797676;
+.bio {
+  color: #218380;
+  background-color: #64D0AE;
+  font-size: 30px;
+}
+
+.pie-chart {
+  background-color: #A5D0A8;
+}
+
+.star-repo {
+  color: #e66903;
+  background-color: #FFCA3A;
+  font-size: 30px;
 }

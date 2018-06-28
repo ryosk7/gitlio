@@ -1,16 +1,17 @@
 .container
-  .card-deck
+  .row
     - @users.each do |user|
-      .card
-        = link_to welcome_path(user)
-          .avatar
-            = image_tag(user.avatar_image, class: "avatar_img")
-            h1
-              = user.name
-          .card-body
-            p.card-text
-              - langs = user.repositories.map { |repo| repo.language.name }.compact.uniq
-              ul.repo-list
-                - langs.each do |lang|
-                  li
-                    = lang
+      .col-xl-3
+        .profile-card
+          = link_to welcome_path(user)
+            .avatar
+              = image_tag(user.avatar_image, class: "avatar_img")
+              h1
+                = user.name
+            .card-content
+              p.card-text
+                - langs = user.repositories.map { |repo| repo.language.name }.compact.uniq
+                ul.repo-list
+                  - langs.each do |lang|
+                    li
+                      = lang

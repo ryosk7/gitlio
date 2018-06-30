@@ -40,12 +40,28 @@ ul {
 /* top-page */
 /* ---------*/
 
-.top-img {
+.discription {
+  margin: 0 0 30px 0;
 }
 
 .discription1 {
   background-color: #77BD55;
   color: #C3D350;
+}
+
+.startup {
+  width: 300px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.discription2 {
+  background-color: #64D0AE;
+  color: #218380;
+}
+
+.donut-chart {
+  width: 500px;
 }
 
 /* ---------- */

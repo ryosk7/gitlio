@@ -31,8 +31,9 @@ html
               button.btn.btn-outline-success
                 = link_to 'Sign in', '/auth/github'
 
-    = yield
-
+    .wrapper
+      = yield
+      .push
     .footer
       p Designed by Ryosuke Uchida.
       p Gitlio &copy;2018

@@ -1,5 +1,9 @@
 class User < ApplicationRecord
   has_many :repositories
+  has_many :active_relationships, class_name: "Relationship",
+                                  foreign_key: "follower_id",
+                                  dependent: :destroy
+  has_many :following, through: :active_relationships, source: :followed
 
   def self.create_with_omniauth(auth)
     create! do |user|
@@ -18,5 +22,14 @@ class User < ApplicationRecord
     repos.each do |repo|
       Repository.create(user: self, name: repo.name, star: repo.stargazers_count, language: Language.find_or_create_by(name: repo.language))
     end
+  end
+  def follow(other_user)
+    active_relationships.create(followed_id: other_user.id)
+  end
+  def unfollow(other_user)
+    active_relationships.find_by(followed_id: other_user.id).destroy
+  end
+  def following?
+    following.include?(other_user)
   end
 end

@@ -19,3 +19,8 @@
             - if repo.star > 0
               li
                 = "- #{repo.name}"
+
+= @user.following.count
+= @user.followers.count
+
+= render 'follow_form' if logged_in?

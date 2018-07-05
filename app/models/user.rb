@@ -33,7 +33,7 @@ class User < ApplicationRecord
   def unfollow(other_user)
     active_relationships.find_by(followed_id: other_user.id).destroy
   end
-  def following?
-    following.include?(other_user)
+  def following?(other_user)
+    following_relationships.find_by(following_id: other_user.id)
   end
 end
